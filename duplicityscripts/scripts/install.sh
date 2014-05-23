@@ -24,16 +24,15 @@ wget -O /etc/master-backup.conf --no-check-certificate https://raw.githubusercon
 
 
 # On récupère les scripts
-wget -O /usr/local/sbin/master-backup-cleanup.sh --no-check-certificate https://raw.githubusercontent.com/lordzurp/Scripts-Utiles/master/duplicityscripts/scripts/master-backup-cleanup.sh
-wget -O /usr/local/sbin/master-backup-listing.sh --no-check-certificate https://raw.githubusercontent.com/lordzurp/Scripts-Utiles/master/duplicityscripts/scripts/master-backup-listing.sh
-wget -O /usr/local/sbin/master-backup-restore.sh --no-check-certificate https://raw.githubusercontent.com/lordzurp/Scripts-Utiles/master/duplicityscripts/scripts/master-backup-restore.sh
-wget -O /usr/local/sbin/master-backup-status.sh --no-check-certificate https://raw.githubusercontent.com/lordzurp/Scripts-Utiles/master/duplicityscripts/scripts/master-backup-status.sh
-wget -O /usr/local/sbin/master-backup-verify.sh --no-check-certificate https://raw.githubusercontent.com/lordzurp/Scripts-Utiles/master/duplicityscripts/scripts/master-backup-verify.sh
-wget -O /usr/local/sbin/master-backup.sh --no-check-certificate https://raw.githubusercontent.com/lordzurp/Scripts-Utiles/master/duplicityscripts/scripts/master-backup.sh
+wget -O /usr/local/sbin/master-backup-cleanup.sh --no-check-certificate https://raw.github.com/yvangodard/Scripts-Utiles/master/duplicityscripts/scripts/master-backup-cleanup.sh
+wget -O /usr/local/sbin/master-backup-listing.sh --no-check-certificate https://raw.github.com/yvangodard/Scripts-Utiles/master/duplicityscripts/scripts/master-backup-listing.sh
+wget -O /usr/local/sbin/master-backup-restore.sh --no-check-certificate https://raw.github.com/yvangodard/Scripts-Utiles/master/duplicityscripts/scripts/master-backup-restore.sh
+wget -O /usr/local/sbin/master-backup-status.sh --no-check-certificate https://raw.github.com/yvangodard/Scripts-Utiles/master/duplicityscripts/scripts/master-backup-status.sh
+wget -O /usr/local/sbin/master-backup-verify.sh --no-check-certificate https://raw.github.com/yvangodard/Scripts-Utiles/master/duplicityscripts/scripts/master-backup-verify.sh
+wget -O /usr/local/sbin/master-backup.sh --no-check-certificate https://raw.github.com/yvangodard/Scripts-Utiles/master/duplicityscripts/scripts/master-backup.sh
  
 # On les rends exécutables
 sudo chmod +x /usr/local/sbin/master-backup*
-
 
 # backup mysql
 wget -O /usr/local/sbin/mysql-backup.sh --no-check-certificate https://raw.githubusercontent.com/lordzurp/Scripts-Utiles/master/mysqlbackup/mysql-backup.sh
