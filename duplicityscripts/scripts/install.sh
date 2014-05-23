@@ -19,7 +19,7 @@ rm -Rf /usr/src/python-cloudfiles-hubic
 # les paramètres spécifiques sont stockés dans d'autres fichiers de config, en fonction du backup (sites, system ou mysql)
 wget -O /etc/master-backup.conf --no-check-certificate https://raw.githubusercontent.com/lordzurp/Scripts-Utiles/master/duplicityscripts/etc/master-backup.conf
 wget -O /etc/master-backup.system.conf --no-check-certificate https://raw.githubusercontent.com/lordzurp/Scripts-Utiles/master/duplicityscripts/etc/master-backup.system.conf
-wget -O /etc/master-backup..sites.conf --no-check-certificate https://raw.githubusercontent.com/lordzurp/Scripts-Utiles/master/duplicityscripts/etc/master-backup.sites.conf
+wget -O /etc/master-backup.sites.conf --no-check-certificate https://raw.githubusercontent.com/lordzurp/Scripts-Utiles/master/duplicityscripts/etc/master-backup.sites.conf
 wget -O /etc/master-backup.mysql.conf --no-check-certificate https://raw.githubusercontent.com/lordzurp/Scripts-Utiles/master/duplicityscripts/etc/master-backup.mysql.conf
 
 
