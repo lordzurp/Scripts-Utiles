@@ -7,7 +7,12 @@ mkdir /home/mysql
 
 # on installe git et on patche cloudfiles
 
+#Version CentOS - pour la prod
 /usr/bin/yum install --assumeyes python-setuptools git duplicity
+
+# version Debian - mode Rescue
+#apt-get update && apt-get install python-setuptools git duplicity
+
 cd /usr/src
 git clone https://github.com/yvangodard/python-cloudfiles-hubic.git
 cd python-cloudfiles-hubic
@@ -32,9 +37,9 @@ wget -O /usr/local/sbin/master-backup-verify.sh --no-check-certificate https://r
 wget -O /usr/local/sbin/master-backup.sh --no-check-certificate https://raw.github.com/yvangodard/Scripts-Utiles/master/duplicityscripts/scripts/master-backup.sh
  
 # On les rends exécutables
-sudo chmod +x /usr/local/sbin/master-backup*
+chmod +x /usr/local/sbin/master-backup*
 
 # backup mysql
 wget -O /usr/local/sbin/mysql-backup.sh --no-check-certificate https://raw.githubusercontent.com/lordzurp/Scripts-Utiles/master/mysqlbackup/mysql-backup.sh
-sudo chmod +x /usr/local/sbin/mysql-backup.sh
+chmod +x /usr/local/sbin/mysql-backup.sh
 
