@@ -2,7 +2,7 @@
 
 # préparation du repertoire backup
 mkdir /home/backups
-mkdir /home/mysql
+mkdir /home/mysql.backups
 
 
 # on installe git et on patche cloudfiles

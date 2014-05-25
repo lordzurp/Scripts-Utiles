@@ -13,7 +13,7 @@ CURRENT_DIR=$(dirname $0)
 SCRIPT_NAME=$(basename $0)
 HOSTNAME=$(hostname)
 # Répertoire de sauvergarde des dump SQL
-LOCATION="/home/mysqldump"
+LOCATION="/home/mysql.backups"
 # Nom du backup
 DATANAME="databasebackup-$(date +%d.%m.%y@%Hh%M)"
 # Répertoire temporaire
@@ -84,9 +84,9 @@ mkdir -p ${DATATMP}/${DATANAME}
  
 # On place dans un tableau le nom de toutes les bases de données du serveur
 # Version avec mot de passe
-# databases="$(mysql --user=$USER --password=$PASS -Bse 'show databases' | grep -v -E $EXCLUSIONS)"
+databases="$(mysql --user=$USER --password=$PASS -Bse 'show databases' | grep -v -E $EXCLUSIONS)"
 # Version sans mot de passe
-databases="$(mysql -Bse 'show databases' | grep -v -E $EXCLUSIONS)"
+# databases="$(mysql -Bse 'show databases' | grep -v -E $EXCLUSIONS)"
 [ $? -ne 0 ] && ERROR=1 && echo "*** Problème pour obtenir la liste des bases à dumper ***" >> $LOG_OUT
 echo "Bases de données à traiter :" >> $LOG_OUT
  
@@ -96,9 +96,9 @@ for database in ${databases[@]}
 do
     echo "- ${database}.sql"  >> $LOG_OUT
     # Version avec mot de passe
-    # mysqldump  --user=$USER --password=$PASS --events --quick --add-locks --lock-tables --extended-insert $database  > ${DATATMP}/${DATANAME}/${database}.sql
+    mysqldump  --user=$USER --password=$PASS --events --quick --add-locks --lock-tables --extended-insert $database  > ${DATATMP}/${DATANAME}/${database}.sql
     # Version sans mot de passe
-    mysqldump --events --quick --add-locks --lock-tables --extended-insert $database  > ${DATATMP}/${DATANAME}/${database}.sql
+    # mysqldump --events --quick --add-locks --lock-tables --extended-insert $database  > ${DATATMP}/${DATANAME}/${database}.sql
     [ $? -ne 0 ] && ERROR=1 && echo "*** Problème sur le dump de la base $database ***"  >> $LOG_OUT
 done
  
