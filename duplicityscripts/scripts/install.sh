@@ -35,6 +35,10 @@ wget -O /usr/local/sbin/master-backup-restore.sh --no-check-certificate https://
 wget -O /usr/local/sbin/master-backup-status.sh --no-check-certificate https://raw.github.com/yvangodard/Scripts-Utiles/master/duplicityscripts/scripts/master-backup-status.sh
 wget -O /usr/local/sbin/master-backup-verify.sh --no-check-certificate https://raw.github.com/yvangodard/Scripts-Utiles/master/duplicityscripts/scripts/master-backup-verify.sh
 wget -O /usr/local/sbin/master-backup.sh --no-check-certificate https://raw.github.com/yvangodard/Scripts-Utiles/master/duplicityscripts/scripts/master-backup.sh
+
+# et le pti nouveau
+wget -O /usr/local/sbin/master-backup.sh --no-check-certificate https://raw.githubusercontent.com/lordzurp/Scripts-Utiles/master/duplicityscripts/scripts/master-backup-all.sh
+
  
 # On les rends exécutables
 chmod +x /usr/local/sbin/master-backup*
