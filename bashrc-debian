@@ -65,6 +65,10 @@ alias s="subl ."
 alias o="open"
 alias oo="open ."
 
+# Tmux tips
+alias tmuxn  tmux new-session -s 
+alias tmuxx  tmux attach-session -t 
+
 # Enable aliases to be sudoâ€™ed
 alias sudo='sudo '
 

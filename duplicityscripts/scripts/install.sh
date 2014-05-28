@@ -8,7 +8,7 @@ mkdir /home/mysql.backups
 # on installe git et on patche cloudfiles
 
 #Version CentOS - pour la prod
-/usr/bin/yum install --assumeyes python-setuptools git duplicity
+/usr/bin/yum install --assumeyes python-setuptools git duplicity tmux
 
 # version Debian - mode Rescue
 #apt-get update && apt-get install python-setuptools git duplicity
