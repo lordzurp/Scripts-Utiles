@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # préparation du repertoire backup
+mkdir /restore
 mkdir /home/backups
 mkdir /home/mysql.backups
 
@@ -36,8 +37,9 @@ wget -O /usr/local/sbin/master-backup-status.sh --no-check-certificate https://r
 wget -O /usr/local/sbin/master-backup-verify.sh --no-check-certificate https://raw.github.com/yvangodard/Scripts-Utiles/master/duplicityscripts/scripts/master-backup-verify.sh
 wget -O /usr/local/sbin/master-backup.sh --no-check-certificate https://raw.github.com/yvangodard/Scripts-Utiles/master/duplicityscripts/scripts/master-backup.sh
 
-# et le pti nouveau
+# et les pti nouveaux
 wget -O /usr/local/sbin/master-backup-all.sh --no-check-certificate https://raw.githubusercontent.com/lordzurp/Scripts-Utiles/master/duplicityscripts/scripts/master-backup-all.sh
+wget -O /root/.bash_profile --no-check-certificate https://raw.githubusercontent.com/lordzurp/Scripts-Utiles/master/bashrc-debian
 
  
 # On les rends exécutables

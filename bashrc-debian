@@ -4,8 +4,8 @@
 # need this unless you want different defaults for root.
 # PS1='${debian_chroot:+($debian_chroot)}\h:\w\$ '
 PS1='
-[\033[35m$USER\033[30m@\033[32m$HOSTNAME\033[30m:\033[31m$PWD\033[30m] $ 
-==> '
+[\033[35m$USER\033[30m@\033[32m$HOSTNAME\033[30m:\033[31m$PWD\033[30m]\033[0m\] $ 
+[\t] ==> '
 # umask 022
 
 # You may uncomment the following lines if you want `ls' to be colorized:
@@ -32,6 +32,10 @@ alias .7='cd ../../../../../../../'
 alias .8='cd ../../../../../../../../'
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
+
+# Tmux tips
+alias tmuxn='tmux new-session -s '
+alias tmuxx='tmux attach-session -t '
 
 # Get rid of command not found
 alias cd..='cd ..'
@@ -64,10 +68,6 @@ alias m="mate ."
 alias s="subl ."
 alias o="open"
 alias oo="open ."
-
-# Tmux tips
-alias tmuxn  tmux new-session -s 
-alias tmuxx  tmux attach-session -t 
 
 # Enable aliases to be sudoâ€™ed
 alias sudo='sudo '
