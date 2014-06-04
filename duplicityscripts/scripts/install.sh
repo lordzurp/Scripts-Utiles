@@ -9,7 +9,10 @@ mkdir /home/mysql.backups
 # on installe git et on patche cloudfiles
 
 #Version CentOS - pour la prod
-/usr/bin/yum install --assumeyes python-setuptools git duplicity tmux mytop monit logwatch
+/usr/bin/yum install --assumeyes python-setuptools git duplicity 
+
+# Quelques soft en plus
+# /usr/bin/yum install --assumeyes tmux mytop monit logwatch
 
 # version Debian - mode Rescue
 #apt-get update && apt-get install python-setuptools git duplicity
