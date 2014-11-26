@@ -55,6 +55,8 @@ alias s="subl ."
 alias o="open"
 alias oo="open ."
 
+alias su="sudo su"
+
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
     colorflag="--color"
@@ -67,6 +69,9 @@ alias l="ls -l ${colorflag}"
 
 # List all files colorized in long format, including dot files
 alias la="ls -la ${colorflag}"
+
+# List all files with ACL's details
+alias le="ls -le ${colorflag}"
 
 # List only directories
 alias lsd='ls -l ${colorflag} | grep "^d"'
@@ -189,9 +194,14 @@ alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 
 # configure my multi-line prompt
 # thanks to http://www.siteduzero.com/informatique/tutoriels/personnalisez-votre-shell-en-couleur/pilule-bleue-ou-rouge
-PS1='
-[\033[35m$USER\033[30m@\033[32m$HOSTNAME\033[30m:\033[31m$PWD\033[30m] $ 
-==> '
+
+#PS1='
+#[\033[35m$USER\033[30m@\033[32m$HOSTNAME\033[30m:\033[31m$PWD\033[30m] $ 
+#==> '
+
+export PS1="\n[\t] \e[01;42m\] \u \e[m\]\e[1;30m\]@\e[m\]\e[01;32m\]\h\e[m\]:\e[01;34m\]\w/\e[m\] \n\$ "
+export SUDO_PS1="\n[\t] \e[1;32;41m\] \u \e[m\]\e[1;30m\]@\e[m\]\e[01;32m\]\h\e[m\]:\e[01;34m\]\w/\e[m\] \n\$ "
+
 
 if [ "$TERM" != "dumb" ]; then
 echo -e "\t>>> Quelques commandes utiles :"
@@ -210,3 +220,14 @@ echo -e "\t\t  l='ls -l', la='ls -la', lsd='ls -l | grep ^d'"
 echo -e "\t\t  gurl='curl --compressed'"
 
 fi
+##
+# Your previous /Users/lordzurp/.bash_profile file was backed up as /Users/lordzurp/.bash_profile.macports-saved_2014-11-24_at_16:27:12
+##
+
+# MacPorts Installer addition on 2014-11-24_at_16:27:12: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+# adding ccache from brew
+export PATH="/usr/local/opt/ccache/libexec:$PATH"
+
